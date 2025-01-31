@@ -1,3 +1,8 @@
+// Configuration - modify these values for your location
+const CITY = 'Your City'    // e.g., 'New York'
+const STATE = 'YOUR_STATE'  // e.g., 'NY'
+const ZIP = 'YOUR_ZIP'      // e.g., '10001'
+
 // Sets the emails sheet and retrieves the headers
 let sheet = SpreadsheetApp.getActiveSpreadsheet();
 sheet = SpreadsheetApp.setActiveSheet(sheet.getSheetByName('Emails'))
@@ -9,9 +14,6 @@ const emailIdx = headers.indexOf('Email Address') + 1
 const firstNameIdx = headers.indexOf('First Name') + 1
 const lastNameIdx = headers.indexOf('Last Name') + 1
 const addressNameIdx = headers.indexOf('Street Address') + 1
-const city = 'Jenison'
-const state = 'MI'
-const zip = '49428'
 
 const API_KEY = PropertiesService.getScriptProperties().getProperty('MAILCHIMP_API_KEY')
 const LIST_ID = PropertiesService.getScriptProperties().getProperty('MAILCHIMP_LIST_ID')
